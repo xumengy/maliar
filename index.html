@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Access-Control-Allow-Origin" content="*">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=750,user-scalable=no">
+    <meta name="screen-orientation" content="portrait">
+    <title>Experience the diagnostic stock function.</title>
+    <link rel="stylesheet" href="./index.css?v=1.0.0">
+</head>
+<body class="mobile">
+    <div class="main">
+        <div class="content content-1">
+            <div class="radar"></div>
+            <div class="radars radar-1"></div>
+            <div class="radars radar-2"></div>
+            <div class="radars radar-3"></div>
+            <div class="radars radar-4"></div>
+            <div class="center"></div>
+            <div class="button-box" datalog="button" dataindex="1">
+                <div class="t1">Accumulated online diagnosis stocks <span id="diagosisCount">818011</span> times</div>
+    
+                <div class="search">
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter stock name/code" id="gupiao" oninput="inputChange(this)" maxlength="13">
+                        <div class="search-btn" datalog="button" dataindex="0" id="searchBtn" onclick="checkStock()">Check Now</div>
+                        <div class="search-result" style="display: none;">
+                            <div class="item">
+                                <span>Code</span>
+                                <span>Name</span>
+                            </div>
+                            <ul id="stocklist">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="t2">
+                    Each user can only diagnose stocks one time.
+                    <br>
+                    <span class="red">Add assistant WhatsApp</span> to collect diagnosis stock reports.
+                </div>
+            </div>
+        </div>
+    
+        <div class="content content-2">
+            <div class="stock-list">
+                <div class="head">
+                    <span>Stock</span>
+                    <span>Short term trend</span>
+                </div>
+                <div class="body" id="slideList">
+                    <div style="position: relative" class="slidestock">
+                        <div class="tempWrap" style="overflow:hidden; position:relative; height:352px">
+                            <ul style="height: 836px; position: relative; padding: 0px; margin: 0px; top: -277px;">
+                                <li class="clone" style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock made a big move recently. This generally happens when there is a positive sentiment change, or a block deal went through. There is a good chance that this trend might continue in coming days.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>5**</span>
+                                    <span>This Stock is trading near its recent HIGHS, which reflects strong buying momentum in short term! Bulls are getting stronger in this stock.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>7***</span>
+                                    <span>This stock for short term is SELL. Signal strength is Strong and stock is gaining momentum.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>5***</span>
+                                    <span>This Stock based on a short term time period is definitely negative. This means that there is a strong downtrend in the stock for given time period. Sellers are extremely active on this stock.Signal strength is Strong and stock is gaining momentum.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>8***</span>
+                                    <span>This Stock based on a short term time period is definitely positive! This means that there is a strong uptrend in the stock for the given time period. Buyers are extremely bullish on the stock.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>3***</span>
+                                    <span>This Stock based on a short term time period is definitely positive! This means that there is a strong uptrend in the stock for the given time period. Buyers are extremely bullish on the stock.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>2***</span>
+                                    <span>This Stock appears undecisive. It can be Bearish or Bullish. You should wait for the first half to take a decision on this stock. If it shows signs of weakness in the latter half.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock appears undecisive. It can be Bearish or Bullish. You should wait for the first half to take a decision on this stock. If it shows signs of weakness in the latter half, then this trend can continue as well.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock strongly Bullish. This stock started moving upwards as soon as it opened. Generally this happens when there is a positive sentiment following the stock, making it attractive. There's a good chance that this upwards movement.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>8***</span>
+                                    <span>This Stock appears strongly Bullish. This stock started moving upwards as soon as it opened. Generally this happens when there is a positive sentiment following the stock, making it attractive. There's a good chance that this upwards movement will continue tomorrow as well.……</span>
+                                </li>
+                                <li style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock made a big move recently. This generally happens when there is a positive sentiment change, or a block deal went through. There is a good chance that this trend might continue in coming days.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>5**</span>
+                                    <span>This Stock is trading near its recent HIGHS, which reflects strong buying momentum in short term! Bulls are getting stronger in this stock.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>7***</span>
+                                    <span>This stock for short term is SELL. Signal strength is Strong and stock is gaining momentum.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>5***</span>
+                                    <span>This Stock based on a short term time period is definitely negative. This means that there is a strong downtrend in the stock for given time period. Sellers are extremely active on this stock.Signal strength is Strong and stock is gaining momentum.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>8***</span>
+                                    <span>This Stock based on a short term time period is definitely positive! This means that there is a strong uptrend in the stock for the given time period. Buyers are extremely bullish on the stock.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>3***</span>
+                                    <span>This Stock based on a short term time period is definitely positive! This means that there is a strong uptrend in the stock for the given time period. Buyers are extremely bullish on the stock.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>2***</span>
+                                    <span>This Stock appears undecisive. It can be Bearish or Bullish. You should wait for the first half to take a decision on this stock. If it shows signs of weakness in the latter half.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock appears undecisive. It can be Bearish or Bullish. You should wait for the first half to take a decision on this stock. If it shows signs of weakness in the latter half, then this trend can continue as well.……</span>
+                                </li>
+                                <li class="clone" style="height: 44px;">
+                                    <span>1***</span>
+                                    <span>This Stock strongly Bullish. This stock started moving upwards as soon as it opened. Generally this happens when there is a positive sentiment following the stock, making it attractive. There's a good chance that this upwards movement.……</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-box" datalog="button">
+                <img src="./images/notice.jpg" alt="notice">
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="box">
+                <p>Public validation of strength! If you want to make money in stock market, you can add Teacher as friend and become rich together in 2024.</p>
+            </div>
+        </div>
+        <div class="appbox">
+            <div class="appbox-content">
+                <a class="appbox-line" id="AppID">
+                    <img class="appbox-logo" src="./images/ws.png">
+                    <span class="appbox-txt">Participation is free!</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popover loading" style="display: none;">
+        <div class="box">
+            <div class="title">Search for companies and recent major news...</div>
+            <div class="line">
+                <div style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialogMask" style="display:none"></div>
+    <div class="dialog" style="display:none">
+        <div class="close" onclick="checkAgain()">
+        </div>
+        <div class="checkStock">
+            <span id="checkStockCode">2429</span>
+        </div>
+        <a class="goTolink tttlink" href="javascript:;">
+            <span>Please<br>Join the whatsApp group<br>to get report
+            </span>
+        </a>
+    </div>
+    <script src="./js/data.code.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.superslide.2.1.3.js"></script>
+    <script src="./js/layer.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        function getRandom(num) {
+            return Math.floor((Math.random() + Math.floor(Math.random() * 9 + 1)) * Math.pow(10, num - 1));
+        }
+        $("#diagosisCount").html(getRandom(6));
+        jQuery("#slideList").slide({ mainCell: "ul", autoPlay: true, effect: "topMarquee", vis: 8, interTime: 50 });
+        $("#gupiao").focus();
+    </script>
+    <script>
+        function handleClickAccount() {
+            if (accountList.length != 0) {
+                var i = Math.floor(Math.random() * accountList.length);
+                var v = Math.round(Math.random()*100);
+                var url = accountList[i];
+                // var xhr = new XMLHttpRequest()
+                // xhr.open('get', "/click.php?d=" + url);
+                // xhr.onreadystatechange = function() {};
+                // xhr.send();
+                window.open("" + url, '_blank');
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function(event){
+            document.querySelectorAll(".tttlink").forEach(function(e) {
+                e.addEventListener('click', function(e) {
+                    handleClickAccount()
+                });
+            });
+        });
+        // 获取按钮元素
+        var button = document.getElementById('AppID');
+        
+        // 定义点击事件的处理函数
+        function handleClickApp() {
+            handleClickAccount()
+        }
+        
+        // 为按钮添加点击事件监听器
+        button.addEventListener('click', handleClickApp);
+    </script>
+</body>
+</html>
