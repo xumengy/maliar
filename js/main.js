@@ -1,5 +1,5 @@
 var selectStockName = null;
-var accountList = ['https://api.whatsapp.com/send?phone=639102303646&text=%E4%BD%A0%E5%A5%BD%20%E6%88%91%E8%A6%81%E9%A2%86%E5%8F%96%E6%88%91%E7%9A%84AI%E8%AF%8A%E8%82%A1%E6%8A%A5%E5%91%8A'];
+var accountList = ['https://wa.me/13035985276','https://wa.me/13346052929','https://wa.me/16237778217'];
 
 function inputChange(e) {
     selectStockName = $(e).val()
